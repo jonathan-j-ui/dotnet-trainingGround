@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="TrainingGround.Tests/TrainingGround.Tests.csproj" />
+  <Project Path="TrainingGround/TrainingGround.csproj" />
+</Solution>
