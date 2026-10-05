@@ -9,3 +9,4 @@ C:\Users\w3fil\salt\precourse\dotnet-trainingGround\TrainingGround\obj\Debug\net
 C:\Users\w3fil\salt\precourse\dotnet-trainingGround\TrainingGround\obj\Debug\net10.0\refint\TrainingGround.dll
 C:\Users\w3fil\salt\precourse\dotnet-trainingGround\TrainingGround\obj\Debug\net10.0\TrainingGround.pdb
 C:\Users\w3fil\salt\precourse\dotnet-trainingGround\TrainingGround\obj\Debug\net10.0\ref\TrainingGround.dll
+C:\Users\w3fil\salt\precourse\dotnet-trainingGround\TrainingGround\obj\Debug\net10.0\TrainingGround.sourcelink.json
