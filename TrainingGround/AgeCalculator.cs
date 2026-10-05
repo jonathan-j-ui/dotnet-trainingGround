@@ -1,6 +1,11 @@
-﻿namespace TrainingGround;
+﻿using System.Reflection.Metadata.Ecma335;
 
-public class Class1
+namespace TrainingGround;
+
+public class AgeCalculator
 {
-
+    public int GetAge(int birthYear, int currentYear)
+    {
+        return 0;
+    }
 }
