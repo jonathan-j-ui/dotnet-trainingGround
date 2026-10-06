@@ -44,8 +44,8 @@ public class TypesTests
 
         // assert
         Assert.Equal(50, age);
-        Assert.IsType(typeof(Person), p);
-        Assert.IsType(typeof(int), age);
+        Assert.IsType<Person>(p);
+        Assert.IsType<int>(age);
 
     }
 
