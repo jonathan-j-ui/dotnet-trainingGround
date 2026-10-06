@@ -1,6 +1,6 @@
 namespace TrainingGround;
 
-public class Person
+public class Person : IPrintable
 {
     private string? _name;
     private int _birthYear;
@@ -57,6 +57,13 @@ public class Person
     public int GetAge(int currentYear)
     {
         return currentYear - this.BirthYear;
+    }
+
+    public string GetPrintString()
+    {
+        return @$"{this.Name}
+        {this.Address.Street} {this.Address.StreetNo}
+        {this.Address.City}";
     }
 
 }
