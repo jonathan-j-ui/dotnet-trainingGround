@@ -6,8 +6,6 @@ public class Person
     private int _birthYear;
     private double _lengthInMeters;
 
-    private Address _adress;
-
     public Person(){
         
     }
