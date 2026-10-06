@@ -45,4 +45,16 @@ public class PersonTests
         Assert.IsType<Employee>(emp);
         Assert.Equal(1.95, emp.LengthInMeters);
     }
+
+    [Fact]
+    public void AnEmployeeHasAnEmployeeId()
+    {
+        // act
+        var emp = new Employee("Jonathan", "234-BDAS");
+
+        // assert
+        Assert.IsType<Employee>(emp);
+        Assert.Equal("Marcus", emp.Name);
+        Assert.Equal("234-BDAS", emp.EmployeeId);
+    }
 }
