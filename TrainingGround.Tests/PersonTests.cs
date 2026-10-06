@@ -12,6 +12,6 @@ public class PersonTests
         var p = new Person("Jonathan");
 
         // assert
-        Assert.Equal("Jonathan", p.Name);
+        Assert.Equal("Jonathan", p.GetName());
     }
 }
