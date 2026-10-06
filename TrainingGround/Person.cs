@@ -2,18 +2,25 @@ namespace TrainingGround;
 
 public class Person
 {
-    private string Name;
+    private string _name;
     private int birthYear;
     private double LengthInMeters;
 
-    public Person(string name)
+    public Person(string _name)
     {
-        this.Name = name;
+        this._name = _name;
     }
 
-    public string GetName()
+    public string Name
     {
-        return this.Name;
+        get { return _name; }
+        set
+        {
+            if (value.Length > 5)
+            {
+                this._name = value;
+            }
+        }
     }
 
     public int GetBirthYear()
