@@ -44,7 +44,7 @@ public class Person
 
     public int GetAge(int currentYear)
     {
-        return currentYear - _birthYear;
+        return currentYear - this.BirthYear;
     }
 
 }
