@@ -3,8 +3,8 @@ namespace TrainingGround;
 public class Person
 {
     private string _name;
-    private int birthYear;
-    private double LengthInMeters;
+    private int _birthYear;
+    private double _lengthInMeters;
 
     public Person(string _name)
     {
@@ -23,14 +23,23 @@ public class Person
         }
     }
 
-    public int GetBirthYear()
+    public int BirthYear
     {
-        return this.birthYear;
+        get { return _birthYear; }
+        set
+        {
+            this._birthYear = value;
+        }
     }
 
-    public double GetLengthInMeters()
+    public double LengthInMeters
     {
-        return this.LengthInMeters;
+        get { return _lengthInMeters; }
+        set
+        {
+            this._lengthInMeters = value;
+        }
+        
     }
 
 }
