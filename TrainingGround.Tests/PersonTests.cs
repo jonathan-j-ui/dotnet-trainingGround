@@ -1,3 +1,4 @@
+using System.Net.Sockets;
 using System.Reflection;
 
 namespace TrainingGround.Tests;
@@ -56,5 +57,27 @@ public class PersonTests
         Assert.IsType<Employee>(emp);
         Assert.Equal("Jonathan", emp.Name);
         Assert.Equal("234-BDAS", emp.EmployeeId);
+    }
+
+    [Fact]
+    public void APersonHasAnAdress()
+    {
+        // arrange
+        var p = new Person("Jonathan);
+
+        // act
+        p.Address = new Address();
+        p.Address.Street = "A street";
+        p.Address.StreetNo = 23;
+        p.Adress.City = "Stockholm";
+
+        // assert
+        Assert.NotNull(p.Address);
+        Assert.IsType<Address>(p.Address);
+
+        Assert.Equal("A street", p.Address.Street);
+        Assert.Equal(23, p.Address.StreetNo);
+        Assert.Equal("Stockholm", p.Address.City);
+    
     }
 }
