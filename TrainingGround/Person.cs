@@ -13,7 +13,7 @@ public class Person
 
     public string Name
     {
-        get;
+        get { return _name; }
         set
         {
             if (value.Length > 5)
@@ -25,14 +25,20 @@ public class Person
 
     public int BirthYear
     {
-        get;
-        set;
+        get { return _birthYear; }
+        set
+        {
+            this._birthYear = value;
+        }
     }
 
     public double LengthInMeters
     {
-        get;
-        set;
+        get { return _lengthInMeters; }
+        set
+        {
+            this._lengthInMeters = value;
+        }
         
     }
 
