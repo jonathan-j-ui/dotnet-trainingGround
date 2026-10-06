@@ -6,9 +6,15 @@ public class Person
     private int _birthYear;
     private double _lengthInMeters;
 
-    public Person(string _name)
+    public Person(string name)
     {
-        this._name = _name;
+        this._name = name;
+    }
+
+    public Person(string name, int birthYear)
+    {
+        this._name = name;
+        this._birthYear = birthYear;
     }
 
     public string Name
@@ -26,10 +32,6 @@ public class Person
     public int BirthYear
     {
         get { return _birthYear; }
-        set
-        {
-            this._birthYear = value;
-        }
     }
 
     public double LengthInMeters
