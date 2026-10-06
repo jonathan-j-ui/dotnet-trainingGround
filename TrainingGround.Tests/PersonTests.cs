@@ -80,4 +80,25 @@ public class PersonTests
         Assert.Equal("Stockholm", p.Address.City);
     
     }
+
+    [Fact]
+    public void AnEmployeeGetPrintString_GetANicePrintedAddress()
+    {
+        // arrange
+        var emp = new Employee("Jonathan", "234-BDAS");
+        emp.Address = new Address;
+        emp.Address.Street = "A street";
+        emp.Address.StreetNo = 23;
+        emp.Address.City = "Stockholm";
+
+        // act
+        var printString = emp.GetPrintString();
+
+        // assert
+        Assert.Equal(@"Jonathan (234-BDAS)
+        A Street 23
+        Stockholm",
+        printString);
+    }
+
 }
