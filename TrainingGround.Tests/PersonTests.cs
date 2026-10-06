@@ -30,4 +30,19 @@ public class PersonTests
         // assert
         Assert.Equal(expectedAge, age);
     }
+
+    [Fact]
+    public void AnEmployeeIsAPerson()
+    {
+        // arrange
+
+
+        // act
+        var emp = new Employee();
+        emp.LengthInMeters = 1.95;
+
+        // assert
+        Assert.IsType<Employee>(emp);
+        Assert.Equal(1.95, emp.LengthInMeters);
+    }
 }
