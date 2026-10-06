@@ -54,7 +54,7 @@ public class PersonTests
 
         // assert
         Assert.IsType<Employee>(emp);
-        Assert.Equal("Marcus", emp.Name);
+        Assert.Equal("Jonathan", emp.Name);
         Assert.Equal("234-BDAS", emp.EmployeeId);
     }
 }
