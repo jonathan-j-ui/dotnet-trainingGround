@@ -2,9 +2,13 @@ namespace TrainingGround;
 
 public class Person
 {
-    private string _name;
+    private string? _name;
     private int _birthYear;
     private double _lengthInMeters;
+
+    public Person(){
+        
+    }
 
     public Person(string name)
     {
@@ -17,12 +21,12 @@ public class Person
         this._birthYear = birthYear;
     }
 
-    public string Name
+    public string? Name
     {
         get { return _name; }
         set
         {
-            if (value.Length > 5)
+            if (value is not null && value.Length > 5)
             {
                 this._name = value;
             }
