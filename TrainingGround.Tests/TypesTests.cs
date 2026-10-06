@@ -33,4 +33,20 @@ public class TypesTests
         Assert.Equal(1.95, aLengthInMeters);
     }
 
+    [Fact]
+    public void GetAgeFromPerson_ReturnCorrectAge()
+    {
+        // arrange
+        var p = new Person("Person A", 1972);
+
+        // act
+        var age = p.GetAge(2022);
+
+        // assert
+        Assert.Equal(50, age);
+        Assert.IsType(typeof(Person), p);
+        Assert.IsType(typeof(int), age);
+
+    }
+
 }
