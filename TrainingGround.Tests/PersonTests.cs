@@ -107,6 +107,25 @@ public class PersonTests
         Console.WriteLine(printString);
     }
 
-    
+    [Fact]
+    public void CanPrintPrintables()
+    {
+        // arrange
+        var emp = new Employee("Ossian", "234.BDAS");
+        emp.Address = new Address();
+        emp.Address.Street = "B Street";
+        emp.Address.StreetNo = 22;
+        emp.Address.City = "Malmö";
+
+        var p = new Person("Jonathan");
+        p.Address = new Address();
+        p.Address.Street = "A Street";
+        p.Address.StreetNo = 23;
+        p.Address.City = "Stockhlolm";
+
+        // act
+        this.Print(p);
+        this.Print(emp);
+    }
 
 }
