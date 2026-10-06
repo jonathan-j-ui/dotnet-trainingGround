@@ -86,7 +86,7 @@ public class PersonTests
     {
         // arrange
         var emp = new Employee("Jonathan", "234-BDAS");
-        emp.Address = new Address;
+        emp.Address = new Address();
         emp.Address.Street = "A street";
         emp.Address.StreetNo = 23;
         emp.Address.City = "Stockholm";
