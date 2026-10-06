@@ -63,13 +63,13 @@ public class PersonTests
     public void APersonHasAnAdress()
     {
         // arrange
-        var p = new Person("Jonathan);
+        var p = new Person("Jonathan");
 
         // act
         p.Address = new Address();
         p.Address.Street = "A street";
         p.Address.StreetNo = 23;
-        p.Adress.City = "Stockholm";
+        p.Address.City = "Stockholm";
 
         // assert
         Assert.NotNull(p.Address);

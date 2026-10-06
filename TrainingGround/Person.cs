@@ -6,6 +6,8 @@ public class Person
     private int _birthYear;
     private double _lengthInMeters;
 
+    private Address _adress;
+
     public Person(){
         
     }
@@ -51,6 +53,8 @@ public class Person
         }
         
     }
+
+    public Address Address { get; set; }
 
     public int GetAge(int currentYear)
     {
