@@ -101,4 +101,12 @@ public class PersonTests
         printString);
     }
 
+    public void Print(IPrintable printable)
+    {
+        var printString = printable.GetPrintString();
+        Console.WriteLine(printString);
+    }
+
+    
+
 }
