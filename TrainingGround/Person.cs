@@ -59,7 +59,7 @@ public class Person : IPrintable
         return currentYear - this.BirthYear;
     }
 
-    public string GetPrintString()
+    public virtual string GetPrintString()
     {
         return @$"{this.Name}
         {this.Address.Street} {this.Address.StreetNo}

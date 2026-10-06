@@ -12,7 +12,7 @@ public class Employee : Person, IPrintable
 
     public string? EmployeeId { get; set; }
 
-    public string GetPrintString()
+    public override string GetPrintString()
     {
         return @$"{this.Name} ({this.EmployeeId})
         {this.Address.Street} {this.Address.StreetNo}
