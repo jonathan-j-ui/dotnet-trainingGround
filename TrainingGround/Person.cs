@@ -32,6 +32,10 @@ public class Person
     public int BirthYear
     {
         get { return _birthYear; }
+        private set
+        {
+            this._birthYear = value;
+        }
     }
 
     public double LengthInMeters

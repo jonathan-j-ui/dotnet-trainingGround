@@ -15,16 +15,19 @@ public class PersonTests
         Assert.Equal("Jonathan", p.Name);
     }
 
-    [Fact]
-    public void APersonBornIn1972_Is50_In2022()
+    [Theory]
+    [InlineData(1982,2022,40)]
+    [InlineData(1992,2022,30)]
+    [InlineData(2022,2022,0)]
+    public void APersonBornInXXXX_IsYY_InZZZZ(int birthYear, int currentYear, int expectedAge)
     {
         // arrange
-        var p = new Person("Jonathan", 1972);
+        var p = new Person("Jonathan", birthYear);
 
         // act
-        var age = p.GetAge(2022);
+        var age = p.GetAge(currentYear);
 
         // assert
-        Assert.Equal(50, age);
+        Assert.Equal(expectedAge, age);
     }
 }
