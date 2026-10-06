@@ -13,4 +13,14 @@ public class PersonTests
         // assert
         Assert.NotNull(p);
     }
+
+    [Fact]
+    public void ConstructorWithName_CreatesPerson()
+    {
+        // act
+        var p = new Person("Jonathan");
+
+        // assert
+        Assert.Equal("Jonathan", p.Name);
+    }
 }
