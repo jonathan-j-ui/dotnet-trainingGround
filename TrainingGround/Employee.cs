@@ -1,6 +1,6 @@
 namespace TrainingGround;
 
-public class Employee : Person
+public class Employee : Person, IPrintable
 {
     public Employee()
     {}
@@ -11,4 +11,11 @@ public class Employee : Person
     }
 
     public string? EmployeeId { get; set; }
+
+    public string GetPrintString()
+    {
+        return @$"{this.Name} ({this.EmployeeId})
+        {this.Address.Street} {this.Address.StreetNo}
+        {this.Address.City}";
+    }
 }
