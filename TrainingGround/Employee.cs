@@ -3,12 +3,17 @@ namespace TrainingGround;
 public class Employee : Person, IPrintable
 {
     public Employee()
-    {}
+    {
+        this.Addresses = new List<Address>();
+    }
 
     public Employee(string name, string employeeId) : base(name)
     {
         this.EmployeeId = employeeId;
+        this.Addresses = new List<Address>();
     }
+
+    public List<Address> Addresses { get; set; }
 
     public string? EmployeeId { get; set; }
 
