@@ -15,4 +15,15 @@ public class CollectionTests
         Assert.Equal(3, arrayOfIntegersWithValues.Length);
         Assert.Equal(2, ArrayOfString.Length);
     }
+
+    [Fact]
+    public void ShouldGetItemsOut_WhenAccessingIndex()
+    {
+        // act
+        var arrString = new string[] { "Name 1", "Name 2" };
+
+        // assert
+        Assert.Equal("Name 1", arrString[0]);
+        Assert.Equal("Name 2", arrString[1]);
+    }
 }
