@@ -41,13 +41,16 @@ public class ConditionalTests
         Assert.Equal(AgeCategory.Prime, category);
     }
 
-    [Fact]
-    public void ShouldReturnUnder18_WhenKid()
+    [Theory]
+    [InlineData(AgeCategory.Kid, "18 years or below")]
+    [InlineData(AgeCategory.Adult, "19 years and above")]
+    [InlineData(AgeCategory.Prime, "50 years")]
+    public void ShouldReturnUnder18_WhenKid(AgeCategory category, string expectedAgeSpan)
     {
         // act
-        var span = AgeCalculator.GetAgeSpan(AgeCategory.Kid);
+        var span = AgeCalculator.GetAgeSpan(category);
 
         // assert
-        Assert.Equal("18 years or below", span);
+        Assert.Equal(expectedAgeSpan, span);
     }
 }
