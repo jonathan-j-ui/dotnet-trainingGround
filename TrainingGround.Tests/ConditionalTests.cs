@@ -48,6 +48,6 @@ public class ConditionalTests
         var span = AgeCalculator.GetAgeSpan(AgeCategory.Kid);
 
         // assert
-        Assert.Equal("Under 18 years", span);
+        Assert.Equal("18 years or below", span);
     }
 }
