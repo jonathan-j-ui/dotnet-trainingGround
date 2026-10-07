@@ -12,6 +12,6 @@ public class ConditionalTests
         var category = AgeCalculator.GetAgeCategory(p, 2022);
 
         // assert
-        Assert.Equal(AgeCategory.Kid, category)
+        Assert.Equal(AgeCategory.Kid, category);
     }
 }

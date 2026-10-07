@@ -21,6 +21,11 @@ public class Person : IPrintable
         this._birthYear = birthYear;
     }
 
+    public Person(int birthYear)
+    {
+        this._birthYear = birthYear;
+    }
+
     public string? Name
     {
         get { return _name; }
