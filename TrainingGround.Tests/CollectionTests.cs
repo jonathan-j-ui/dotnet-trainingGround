@@ -26,4 +26,23 @@ public class CollectionTests
         Assert.Equal("Name 1", arrString[0]);
         Assert.Equal("Name 2", arrString[1]);
     }
+
+
+    [Fact]
+    public void AListOfIntegersIsVeryFlexible()
+    {
+        // arrange
+        var integerList = new List<int>();
+
+        // act
+        integerList.Add(1);
+        integerList.Add(2);
+        integerList.Add(3);
+        integerList.RemoveAt(0);
+
+        // assert
+        Assert.Equal(2, integerList.Count);
+        Assert.Equal(2, integerList[0]);
+        Assert.Equal(3, integerList[1]);
+    }
 }
