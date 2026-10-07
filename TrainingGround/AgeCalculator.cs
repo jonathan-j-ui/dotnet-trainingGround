@@ -5,7 +5,8 @@ namespace TrainingGround;
 public enum AgeCategory
 {
     Kid,
-    Adult
+    Adult,
+    Prime
 }
 
 public class AgeCalculator
@@ -17,10 +18,16 @@ public class AgeCalculator
 
     public static AgeCategory GetAgeCategory(Person person, int currentYear)
     {
-        if (person.GetAge(currentYear) > 18)
+        var age = person.GetAge(currentYear);
+
+        if (age == 50)
         {
-            return AgeCategory.Adult;
+            return AgeCategory.Prime;
         }
-        return AgeCategory.Kid;
+        else if (age <= 18)
+        {
+            return AgeCategory.Kid;
+        }
+        return AgeCategory.Adult;
     }
 }
