@@ -27,4 +27,17 @@ public class ConditionalTests
         // assert
         Assert.Equal(AgeCategory.Adult, category);
     }
+
+    [Fact]
+    public void ShouldBePrimeAge_When50()
+    {
+        // arrange
+        var p = new Person(1972);
+
+        // act
+        var category = AgeCalculator.GetAgeCategory(p, 2022);
+
+        // assert
+        Assert.Equal(AgeCategory.Prime, category);
+    }
 }
