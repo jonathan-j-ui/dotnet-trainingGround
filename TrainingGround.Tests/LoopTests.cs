@@ -89,4 +89,29 @@ public class LoopTests
         // assert
         Assert.True(foundIt);
     }
+
+
+        [Fact]
+    public void ContinueToNextIterationOfLoop()
+    {
+        // arrange
+        var adressList = new List<Address>();
+        adressList.Add(new Address() { Street = "Street", StreetNo = 1 });
+        adressList.Add(new Address() { Street = "Street", StreetNo = 2 });
+        adressList.Add(new Address() { Street = "Street", StreetNo = 3 });
+
+        // act
+        var SumOfStreetNumbers = 0;
+        foreach (var currentValueInTheLoop in adressList)
+        {
+            if (currentValueInTheLoop.StreetNo == 2)
+            {
+                continue;
+            }
+            SumOfStreetNumbers += currentValueInTheLoop.StreetNo;
+        }
+
+        // assert
+        Assert.Equal(4, SumOfStreetNumbers);
+    }
 }
