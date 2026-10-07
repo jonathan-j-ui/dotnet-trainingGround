@@ -42,4 +42,27 @@ public class LoopTests
             Assert.Equal(i + 1, currentValueInTheLoop);
         }
     }
+
+    [Fact]
+    public void ForEachLoop_UsingAddresses()
+    {
+        // arrange
+        var emp = new Employee("Person 1", "XXX11-XX");
+
+        // act
+        emp.Addresses.Add(new Address{ Street = "Street", StreetNo = 1, City = "Stockholm" });
+        emp.Addresses.Add(new Address{ Street = "Street", StreetNo = 2, City = "Stockholm" });
+        emp.Addresses.Add(new Address{ Street = "Street", StreetNo = 3, City = "Stockholm" });
+
+        int i = 0;
+
+        foreach (var address in emp.Addresses)
+        {
+            // assert
+            Assert.Equal(i + 1, address.StreetNo);
+
+
+            i++;
+        }
+    }
 }
