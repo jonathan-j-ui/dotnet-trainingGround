@@ -65,4 +65,28 @@ public class LoopTests
             i++;
         }
     }
+
+    [Fact]
+    public void BreakStopsLoops()
+    {
+        // arrange
+        var adressList = new List<Address>();
+        adressList.Add(new Address() { Street = "Street", StreetNo = 1 });
+        adressList.Add(new Address() { Street = "Street", StreetNo = 2 });
+        adressList.Add(new Address() { Street = "Street", StreetNo = 3 });
+
+        // act
+        var foundIt = false;
+        foreach (var currentValueInTheLoop in adressList)
+        {
+            if (currentValueInTheLoop.StreetNo == 2)
+            {
+                foundIt = true;
+                break;
+            }
+        }
+
+        // assert
+        Assert.True(foundIt);
+    }
 }
