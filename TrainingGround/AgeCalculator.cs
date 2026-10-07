@@ -21,9 +21,6 @@ public class AgeCalculator
         {
             return AgeCategory.Adult;
         }
-        else
-        {
-            return AgeCategory.Kid;
-        }
+        return AgeCategory.Kid;
     }
 }
