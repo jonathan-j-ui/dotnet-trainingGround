@@ -8,4 +8,9 @@ public class AgeCalculator
     {
         return currentYear - birthYear;
     }
+
+    public static AgeCategory GetAgeCategory(Person person, int currentYear)
+    {
+        return GetAgeCategory.Kid;
+    }
 }
