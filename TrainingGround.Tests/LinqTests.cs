@@ -88,4 +88,17 @@ public class LinqTests
         Assert.Equal("Aaaron", allWithLongNames[0]);
         Assert.Equal("Ceasar", allWithLongNames[1]);
     }
+
+    [Fact]
+    public void LinqOrderNumbers()
+    {
+        // arrange
+        var numbers = new List<int> { 1, 53, 2, 62, 2, 12, 17, 15, 16 };
+
+        // act
+        var orderedNumbers = numbers.OrderBy(num => num).ToList();
+
+        // assert
+        Assert.Equal(2, orderedNumbers[1]);
+    }
 }
