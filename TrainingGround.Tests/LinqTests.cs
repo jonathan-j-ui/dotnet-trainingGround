@@ -101,4 +101,30 @@ public class LinqTests
         // assert
         Assert.Equal(2, orderedNumbers[1]);
     }
+
+    [Fact]
+    public void FilterPeopleByNameLengthAndSelectByLength_ReturnCorrectList()
+    {
+        // arrange
+        var a = new Person("Aaaron");
+        a.LengthInMeters = 1.96;
+        var people = new List<Person>
+        {
+            a,
+            new Person("Bea"),
+            new Person ("Ceasar"),
+            new Person("Dave")
+        };
+
+        // act
+        var namesAndHeights = people
+            .Where(p => p.Name.Length > 4)
+            .Select(p => new { Name = p.Name, Height = p.LengthInMeters })
+            .ToList();
+
+        // assert
+        Assert.Equal(2, namesAndHeights.Count);
+        Assert.Equal("Aaaron", namesAndHeights[0].Name);
+        Assert.Equal(1.96, namesAndHeights[0].Height);
+    }
 }
