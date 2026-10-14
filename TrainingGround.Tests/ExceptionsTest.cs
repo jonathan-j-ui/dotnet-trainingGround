@@ -3,7 +3,7 @@ namespace TrainingGround.Tests;
 public class ExceptionsTest
 {
     [Fact]
-    public void HandlingADivideByZeroException()
+    public void NotHandlingAnException()
     {
         try
         {
