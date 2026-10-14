@@ -27,4 +27,17 @@ public class LinqTests
         // assert
         Assert.Equal(53, firstNumberLargerThan15);
     }
+
+    [Fact]
+    public void LinqToCheckIfAnyMatches()
+    {
+        // arrange
+        var numbers = new List<int> { 1, 53, 2, 62, 2, 12, 17, 15, 16 };
+
+        // act
+        var anyOver100 = numbers.Any(number => number > 100);
+
+        // assert
+        Assert.False(anyOver100);
+    }
 }
