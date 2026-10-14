@@ -65,7 +65,7 @@ public class LinqTests
         Assert.Equal("Aaaron", allWithLongNames[0].Name);
     }
 
-        [Fact]
+    [Fact]
     public void FilterPeopleByNameLengthAndSelect_ReturnCorrectList()
     {
         // arrange
