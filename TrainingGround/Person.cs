@@ -61,7 +61,12 @@ public class Person : IPrintable
 
     public int GetAge(int currentYear)
     {
-        return currentYear - this.BirthYear;
+        var age =  currentYear - this.BirthYear;
+        if (age < 0)
+        {
+            throw new Exception("Not born yet");
+        }
+        return age;
     }
 
     public virtual string GetPrintString()
