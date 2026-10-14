@@ -117,10 +117,11 @@ public class LinqTests
         };
 
         // act
-        var namesAndHeights = people
-            .Where(p => p.Name.Length > 4)
-            .Select(p => new { Name = p.Name, Height = p.LengthInMeters })
-            .ToList();
+        var query =
+            from p in people
+            where p.Name.Length > 4
+            select new { Name = p.Name, Height = p.LengthInMeters };
+        var namesAndHeights = query.ToList();
 
         // assert
         Assert.Equal(2, namesAndHeights.Count);
