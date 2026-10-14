@@ -1,3 +1,5 @@
+using TrainingGround;
+
 namespace TestingGround.Tests;
 
 public class LinqTests
@@ -39,5 +41,27 @@ public class LinqTests
 
         // assert
         Assert.False(anyOver100);
+    }
+
+    [Fact]
+    public void FilterPeopleByNameLength_ReturnCorrectList()
+    {
+        // arrange
+        var people = new List<Person>
+        {
+            new Person("Aaaron"),
+            new Person("Bea"),
+            new Person ("Ceasar"),
+            new Person("Dave")
+        };
+
+        // act
+        var allWithLongNames = people
+            .Where(p => p.Name.Length > 4)
+            .ToList();
+
+        // assert
+        Assert.Equal(2, allWithLongNames.Count);
+        Assert.Equal("Aaaron", allWithLongNames[0].Name);
     }
 }
